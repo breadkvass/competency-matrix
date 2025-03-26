@@ -4,7 +4,6 @@ import { useCallback, useEffect, useState } from 'react';
 import { View, ScrollView } from 'react-native';
 import MainPage from 'src/components/mainPage/mainPage';
 import { useResize } from 'src/hooks/useResize';
-import { MatchesContextProvider } from 'src/utils/matchesContext';
 
 const App = () => {
   const [ appIsReady, setAppIsReady ] = useState(false);
@@ -39,16 +38,14 @@ const App = () => {
   }
 
   return (
-    <MatchesContextProvider>
       <ScrollView
           scrollEnabled={!isScreenS ? true : false}
-          style={{flex: 1, backgroundColor: '#06080C'}}
+          contentContainerStyle={{flex: 1, backgroundColor: 'white'}}
         >
-      <View style={{flex: 1, backgroundColor: '#06080C'}} onLayout={onLayoutRootView}>
+      <View style={{flex: 1, backgroundColor: 'white'}} onLayout={onLayoutRootView}>
         <MainPage />
       </View>
       </ScrollView>
-    </MatchesContextProvider>
   );
 };
 
