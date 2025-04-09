@@ -5,12 +5,10 @@
     "scheme": "app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/assets/images/app-icon.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "image": "./src/assets/images/splash.png",
-      "backgroundColor": "#222"
+      "backgroundColor": "#222222"
     },
     "experiments": {
       "reactServerFunctions": false
@@ -23,8 +21,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./src/assets/images/app-icon.png",
-        "backgroundColor": "#222"
+        "backgroundColor": "#222222"
       },
       "package": "com.haytherecharlie.exporoutertypescript"
     },
