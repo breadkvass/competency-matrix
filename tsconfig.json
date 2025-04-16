@@ -4,7 +4,7 @@
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
     "types": [
-      "@types/styled-components-react-native"
+      "@types/styled-components-react-native",
     ],
     "allowJs": true,
     "esModuleInterop": true,
@@ -27,5 +27,5 @@
     },
     "strict": true
   },
-  "extends": "expo/tsconfig.base"
+  "extends": "@tsconfig/react-native/tsconfig.json"
 }
