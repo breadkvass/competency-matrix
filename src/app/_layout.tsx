@@ -1,14 +1,35 @@
-import { Stack } from 'expo-router';
 import React from 'react';
+import { Stack } from 'expo-router';
+import { Provider } from 'react-redux';
+// import { store } from '../store';
+// import { loadStoredUser } from '../store/slices/authSlice';
 import "./global.css"
 
-const Layout = () => {
-  return (
-    <Stack initialRouteName='index'>
-      <Stack.Screen name='index' options={{ headerShown: false }} />
-      <Stack.Screen name="(auth)"  options={{ headerShown: false }} />
-    </Stack>          
-  );
-};
+export default function RootLayout() {
+  // React.useEffect(() => {
+  //   store.dispatch(loadStoredUser());
+  // }, []);
 
-export default Layout;
+  return (
+    // <Provider store={store}>
+      <Stack 
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen
+          name="(auth)"
+          options={{
+            headerShown: false,
+          }}
+        />
+        {/* <Stack.Screen
+          name="(app)"
+          options={{
+            headerShown: false,
+          }}
+        /> */}
+      </Stack>
+    // </Provider>
+  );
+}

@@ -5,6 +5,7 @@
     "forceConsistentCasingInFileNames": true,
     "types": [
       "@types/styled-components-react-native",
+      "nativewind/types"
     ],
     "allowJs": true,
     "esModuleInterop": true,
