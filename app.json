@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "competency-matrix",
-    "slug": "competency-matrix",
+    "name": "matrix",
+    "slug": "matrix",
     "scheme": "app",
     "version": "1.0.0",
     "orientation": "portrait",
