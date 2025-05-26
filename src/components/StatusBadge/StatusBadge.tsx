@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { getColor } from 'src/constants/colors';
+import { COLORS } from 'src/constants/colors';
 
 type StatusType = 'success' | 'warning' | 'error';
 
@@ -11,12 +11,11 @@ interface StatusBadgeProps {
 
 const StatusBadge: React.FC<StatusBadgeProps> = ({ status, label }) => {
   const getStatusColor = (type: StatusType) => {
-    return getColor('status', type);
+    return type === 'success' ? COLORS.status.success : (type === 'error' ? COLORS.status.error : COLORS.status.warning)
   };
 
   const getBgColor = (type: StatusType) => {
     const color = getStatusColor(type);
-    // Add 20% opacity to the background
     return color + '33';
   };
 

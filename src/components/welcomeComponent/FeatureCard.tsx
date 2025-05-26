@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { getColor } from 'src/constants/colors';
+import { COLORS } from 'src/constants/colors';
 
-interface FeatureCardProps {
+type FeatureCardProps = {
   icon: string;
   title: string;
   description: string;
@@ -27,21 +27,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '50%',
     padding: 16,
-    backgroundColor: getColor('background', 'primary'),
+    backgroundColor: COLORS.background.primary,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: getColor('border', 'light'),
-    shadowColor: getColor('text', 'primary'),
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 2,
+    borderColor:  COLORS.border.light,
   },
   iconContainer: {
     width: 48,
     height: 48,
     borderRadius: 24,
-    backgroundColor: getColor('primary', 'lightTeal'),
+    backgroundColor: COLORS.primary.lightLavender,
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 16,
@@ -55,13 +50,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: '600',
-    color: getColor('text', 'primary'),
+    color: COLORS.text.primary,
     marginBottom: 8,
   },
   description: {
     fontSize: 14,
     lineHeight: 20,
-    color: getColor('text', 'secondary'),
+    color: COLORS.text.secondary,
   },
 });
 

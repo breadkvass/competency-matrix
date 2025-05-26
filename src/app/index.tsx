@@ -2,7 +2,7 @@ import * as Font from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useCallback, useEffect, useState } from 'react';
 import { View, ScrollView, StyleSheet, useWindowDimensions, DimensionValue } from 'react-native';
-import { getColor } from '../constants/colors';
+import { COLORS } from '../constants/colors';
 import WelcomeComponent from 'src/components/welcomeComponent/WelcomeComponent';
 
 const App = () => {
@@ -54,11 +54,11 @@ const App = () => {
 const styles = StyleSheet.create({
   scrollViewContent: {
     flexGrow: 1,
-    backgroundColor: getColor('background', 'secondary'),
+    backgroundColor: COLORS.background.secondary,
   },
   container: {
     flex: 1,
-    backgroundColor: getColor('background', 'secondary'),
+    backgroundColor: COLORS.background.secondary,
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   logoContainer: {
     width: 96,
     height: 96,
-    backgroundColor: getColor('primary', 'lightLavender'),
+    backgroundColor: COLORS.background.secondary,
     borderRadius: 48,
     alignItems: 'center',
     justifyContent: 'center',
@@ -79,19 +79,19 @@ const styles = StyleSheet.create({
   logoText: {
     fontSize: 36,
     fontWeight: 'bold',
-    color: getColor('primary', 'teal'),
+    color: COLORS.primary.teal,
   },
   title: {
     fontSize: 36,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: getColor('text', 'primary'),
+    color: COLORS.text.primary,
     marginBottom: 16,
   },
   subtitle: {
     fontSize: 20,
     textAlign: 'center',
-    color: getColor('text', 'secondary'),
+    color: COLORS.text.secondary,
     maxWidth: 600,
   },
   featuresContainer: {
@@ -113,29 +113,25 @@ const styles = StyleSheet.create({
     marginHorizontal: 'auto',
   },
   primaryButton: {
-    backgroundColor: getColor('primary', 'lavender'),
+    backgroundColor: COLORS.primary.lavender,
     padding: 16,
     borderRadius: 12,
-    shadowColor: getColor('text', 'primary'),
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
   },
   primaryButtonText: {
-    color: getColor('text', 'primary'),
+    color:  COLORS.text.primary,
     textAlign: 'center',
     fontWeight: '600',
     fontSize: 18,
   },
   secondaryButton: {
-    backgroundColor: getColor('background', 'primary'),
+    backgroundColor: COLORS.background.primary,
     padding: 16,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: getColor('border', 'light'),
+    borderColor: COLORS.border.light,
   },
   secondaryButtonText: {
-    color: getColor('text', 'secondary'),
+    color: COLORS.text.secondary,
     textAlign: 'center',
     fontWeight: '600',
     fontSize: 18,

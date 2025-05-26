@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, useWindowDimensions, DimensionValue } from 'react-native';
 import { Link } from 'expo-router';
-import { getColor } from '../../constants/colors';
+import { COLORS } from '../../constants/colors';
 import Container from '../Container/Container';
 import FeatureCard from '../featureCard/FeatureCard';
 
@@ -81,14 +81,9 @@ const styles = StyleSheet.create({
   },
   sidebar: {
     width: '30%',
-    backgroundColor: getColor('background', 'primary'),
+    backgroundColor: COLORS.background.primary,
     borderRadius: 16,
     padding: 24,
-    shadowColor: getColor('text', 'primary'),
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 5,
     justifyContent: 'center',
   },
   sidebarContent: {
@@ -97,27 +92,22 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    backgroundColor: getColor('background', 'primary'),
+    backgroundColor: COLORS.background.primary,
     borderRadius: 16,
     padding: 24,
-    shadowColor: getColor('text', 'primary'),
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 5,
     justifyContent: 'center',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: getColor('text', 'primary'),
+    color: COLORS.text.primary,
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 16,
     textAlign: 'center',
-    color: getColor('text', 'secondary'),
+    color: COLORS.text.secondary,
     marginBottom: 32,
   },
   featureCardsRow: {
@@ -133,29 +123,29 @@ const styles = StyleSheet.create({
     gap: 16,
   },
   primaryButton: {
-    backgroundColor: getColor('primary', 'lavender'),
+    backgroundColor: COLORS.primary.lavender,
     padding: 16,
     borderRadius: 12,
-    shadowColor: getColor('text', 'primary'),
+    color: COLORS.text.primary,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
   },
   primaryButtonText: {
-    color: getColor('text', 'primary'),
+    color: COLORS.text.primary,
     textAlign: 'center',
     fontWeight: '600',
     fontSize: 16,
   },
   secondaryButton: {
-    backgroundColor: getColor('background', 'primary'),
+    backgroundColor: COLORS.background.primary,
     padding: 16,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: getColor('border', 'light'),
+    borderColor: COLORS.border.light,
   },
   secondaryButtonText: {
-    color: getColor('text', 'secondary'),
+    color: COLORS.text.secondary,
     textAlign: 'center',
     fontWeight: '600',
     fontSize: 16,

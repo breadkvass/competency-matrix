@@ -1,40 +1,4 @@
-type ColorCategories = {
-  primary: {
-    lavender: string;
-    teal: string;
-    lightLavender: string;
-  };
-  status: {
-    success: string;
-    warning: string;
-    error: string;
-  };
-  text: {
-    primary: string;
-    secondary: string;
-    light: string;
-  };
-  background: {
-    primary: string;
-    secondary: string;
-    tertiary: string;
-  };
-  border: {
-    light: string;
-    medium: string;
-  };
-  chart: {
-    blue: string;
-    green: string;
-    gray: string;
-  };
-  progress: {
-    onsite: string;
-    remote: string;
-  };
-};
-
-export const COLORS: ColorCategories = {
+export const COLORS = {
   // Primary Colors
   primary: {
     lavender: '#E6E6FA',      // Main action buttons, progress indicators (Lavender)
@@ -82,16 +46,3 @@ export const COLORS: ColorCategories = {
     remote: '#7B68EE',    // Remote team progress (Medium Slate Blue)
   }
 };
-
-// Helper function to get color with type safety
-export const getColor = <T extends keyof ColorCategories>(
-  category: T,
-  subCategory: keyof ColorCategories[T]
-): ColorCategories[T][keyof ColorCategories[T]] => {
-  return COLORS[category][subCategory];
-};
-
-// Usage example:
-// import { getColor } from '@/constants/colors';
-// const primaryColor = getColor('primary', 'mint');
-// backgroundColor: getColor('background', 'primary'); 
