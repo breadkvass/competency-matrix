@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { getColor } from 'src/constants/colors';
+import { COLORS } from 'src/constants/colors';
 
 interface TeamProgressProps {
   onsitePercentage: number;
@@ -32,11 +32,11 @@ const TeamProgress: React.FC<TeamProgressProps> = ({
       
       <View style={styles.legendContainer}>
         <View style={styles.legendItem}>
-          <View style={[styles.legendDot, { backgroundColor: getColor('progress', 'onsite') }]} />
+          <View style={[styles.legendDot, { backgroundColor: COLORS.progress.onsite }]} />
           <Text style={styles.legendText}>Onsite team ({onsitePercentage}%)</Text>
         </View>
         <View style={styles.legendItem}>
-          <View style={[styles.legendDot, { backgroundColor: getColor('progress', 'remote') }]} />
+          <View style={[styles.legendDot, { backgroundColor: COLORS.progress.remote }]} />
           <Text style={styles.legendText}>Remote team ({remotePercentage}%)</Text>
         </View>
       </View>
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
   progressContainer: {
     height: 8,
-    backgroundColor: getColor('background', 'tertiary'),
+    backgroundColor: COLORS.background.tertiary,
     borderRadius: 4,
     flexDirection: 'row',
     overflow: 'hidden',
@@ -60,10 +60,10 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   onsiteBar: {
-    backgroundColor: getColor('progress', 'onsite'),
+    backgroundColor: COLORS.progress.onsite,
   },
   remoteBar: {
-    backgroundColor: getColor('progress', 'remote'),
+    backgroundColor: COLORS.progress.remote,
   },
   legendContainer: {
     flexDirection: 'row',
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   },
   legendText: {
     fontSize: 14,
-    color: getColor('text', 'secondary'),
+    color: COLORS.text.secondary,
   },
 });
 
